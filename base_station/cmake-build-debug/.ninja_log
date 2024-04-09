@@ -1,0 +1,8 @@
+# ninja log v5
+0	234	7343189385335513	CMakeFiles/base_station.dir/main.cpp.obj	734242dae692696c
+1	119	7343193366136480	build.ninja	7420e0a0d74f93a6
+223	314	7343190866045739	base_station.exe	2cfd5624939d3a45
+0	213	7343190865075090	CMakeFiles/base_station.dir/src/main.cpp.obj	1b8374eebe10fb2f
+1	134	7343193366136480	build.ninja	7420e0a0d74f93a6
+0	216	7343193368772433	CMakeFiles/base_station.dir/include/src/main.cpp.obj	c066d16f3dcb2932
+216	308	7343193369647413	base_station.exe	b6a56d525bcef2b5
