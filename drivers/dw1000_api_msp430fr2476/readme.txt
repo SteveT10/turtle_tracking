@@ -1,4 +1,4 @@
-Readme.txt taken from other offcial DWM!000 drivers.
+Readme.txt taken from other offcial DWM1000 drivers.
 REVISED FOR msp430fr2764, WIP.
 
 =============================================================================
