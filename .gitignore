@@ -1,0 +1,8 @@
+.obj
+.out
+
+#Ignore Build files for Tags
+/drivers/dw1000_api_msp430fr2476/**/Debug
+/drivers/dw1000_api_msp430fr2476/**/Launch
+.jxbrowser.userdata*
+.metadata*

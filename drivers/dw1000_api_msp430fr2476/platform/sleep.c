@@ -1,34 +1,39 @@
+/**
+ * deca_sleep implementation for msp430fr2476.
+ *
+ * @author Steven Tieu.
+ * @version 4-28-2024
+ */
 #include "deca_device_api.h"
-#include "sleep.h"
-#include "driverlib.h"
+#include <msp430.h>
 
-//16 Mhz MCLK
-
-int COUNT = 0;
+static int COUNT;
 
 void deca_sleep(unsigned int time_ms) {
+    // Disable the GPIO power-on default high-impedance mode to activate
+    // previously configured port settings
     COUNT = 0;
-    Timer_A_stop(TA0_BASE); //TAxCTL MC = 0 //Disable Timer
-    Timer_A_clear(TA0_BASE);
+    //PM5CTL0 &= ~LOCKLPM5;
 
-    Timer_A_initUpModeParam param = {0};
-    param.clockSource = TIMER_A_CLOCKSOURCE_SMCLK; //16 Mhz
-    param.clockSourceDivider = TIMER_A_CLOCKSOURCE_DIVIDER_1;
-    param.timerPeriod = 16000; //1 ms periods.
-    param.timerInterruptEnable_TAIE = TIMER_A_TAIE_INTERRUPT_ENABLE;
-    param.timerClear = TIMER_A_DO_CLEAR; //TACLR = 1 in TAxCTL reg
-    param.startTimer = true;
+    TA0CTL &= ~0x0030; //Disable Timer
+    TA0CCTL0 |= CCIE;                             // TACCR0 interrupt enabled
+    TA0CCR0 = 1044; //1 MHz clock = SMCLK? Datasheet states 16 Mhz, but this was closest to 1 ms period.
+    TA0CTL |= TASSEL__SMCLK | MC__UP;     // SMCLK, up mode
 
-    Timer_A_initUpMode(TA0_BASE, &param); //TAxCTL MC = 01.
-
-    __bis_SR_register(LPM0_bits | GIE);           // Enter LPM0 w/ interrupts
-
-    //Enter Low power mode and wait for interrupts 
-    while(COUNT <  time_ms);  //Temp while loop, need to look into power modes.
-
-    //TAxCCRn //Period Register for up  mode
+    __bis_SR_register(GIE);           // Enable interrupts
+    while(COUNT < time_ms); //TODO: Enter Low Power Mode to converse power when this happens?
+    TA0CTL &= ~0x0030; //Disable Timer
 }
 
-void Timer_A (void) {
+// Timer A0 interrupt service routine
+#if defined(__TI_COMPILER_VERSION__) || defined(__IAR_SYSTEMS_ICC__)
+#pragma vector = TIMER0_A0_VECTOR
+__interrupt void Timer_A (void)
+#elif defined(__GNUC__)
+void __attribute__ ((interrupt(TIMER0_A0_VECTOR))) Timer_A (void)
+#else
+#error Compiler not supported!
+#endif
+{
     COUNT++;
 }

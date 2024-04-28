@@ -1,57 +1,101 @@
+/**
+ * decamutexoff() and decamutexon() implementations for msp430fr2476.
+ * IRQ and Init processes also added.
+ *
+ * @author Steven Tieu.
+ * @version 4-28-2024
+ */
 #include "deca_device_api.h"
-#include "mutex.h"
-#include "driverlib.h"
+#include <driverlib.h>
 
-void initDWMinterrupt() {
+//NOTE: Untested. I do not know if this file works completely.
+static uint8_t PORT;
+static uint16_t PIN;
+static uint16_t IRQ_VECTOR; //TODO: Test if this works.
+
+void initDWMinterrupt(port, pin) {
+    PORT = port;
+    PIN = pin;
+
+    switch(port) {
+        case GPIO_PORT_P1:
+            IRQ_VECTOR = PORT1_VECTOR;
+            break;
+        case GPIO_PORT_P2:
+            IRQ_VECTOR = PORT2_VECTOR;
+            break;
+        case GPIO_PORT_P3:
+            IRQ_VECTOR = PORT3_VECTOR;
+            break;
+        case GPIO_PORT_P4:
+            IRQ_VECTOR = PORT4_VECTOR;
+            break;
+        case GPIO_PORT_P5:
+            IRQ_VECTOR = PORT5_VECTOR;
+            break;
+        default: //GPIO_PORT_P6:
+            IRQ_VECTOR = PORT6_VECTOR;
+        //TODO: Error handling needed for Invalid Port or Unsupported MCU.
+    }
+
     GPIO_setAsInputPinWithPullDownResistor(
-        GPIO_PORT_P2,
-        GPIO_PIN0
+        PORT,
+        PIN
     );
 
     GPIO_selectInterruptEdge(
-        GPIO_PORT_P2,
-        GPIO_PIN0,
+        PORT,
+        PIN,
         GPIO_LOW_TO_HIGH_TRANSITION
     );
 
     GPIO_clearInterrupt(
-        GPIO_PORT_P2,
-        GPIO_PIN0
+        PORT,
+        PIN
     );
 
     GPIO_enableInterrupt(
-        GPIO_PORT_P2,
-        GPIO_PIN0
+        PORT,
+        PIN
     );
 }
 
 decaIrqStatus_t decamutexon (void) {
-    decaIrqStatus_t s = GPIO_getInterruptStatus(
-        GPIO_PORT_P2,
-        GPIO_PIN0
+    decaIrqStatus_t state = GPIO_getInterruptStatus(
+        PORT,
+        PIN
     );
-    if(s) {
+    if(state) {
         GPIO_disableInterrupt(
-            GPIO_PORT_P2,
-            GPIO_PIN0
+            PORT,
+            PIN
         );
     }
-    return s;
+    return state;
 }
 
 void decamutexoff (decaIrqStatus_t state) {
     if(state) {
         GPIO_enableInterrupt(
-            GPIO_PORT_P2,
-            GPIO_PIN0
+            PORT,
+            PIN
         );
     }
 }
 
-void P2_ISR(void) {
+//DWM1000 Pin Interrupt service routine
+#if defined(__TI_COMPILER_VERSION__) || defined(__IAR_SYSTEMS_ICC__)
+#pragma vector = IRQ_VECTOR
+__interrupt void DWM1000_ISR(void)
+#elif defined(__GNUC__)
+void __attribute__ ((interrupt(IRQ_VECTOR))) DWM1000_ISR(void)
+#else
+#error Compiler not supported!
+#endif
+{
     dwt_isr();
     GPIO_clearInterrupt(
-        GPIO_PORT_P2,
-        GPIO_PIN0
+        PORT,
+        PIN
     );
 }

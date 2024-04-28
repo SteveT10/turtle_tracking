@@ -3,16 +3,6 @@
 
 /home/steve/ti/ccs1260/ccs/utils/bin/gmake -k -j 16 all -O 
  
-Building file: "../main.c"
-Invoking: MSP430 Compiler
-"/home/steve/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="/home/steve/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/home/steve/qorvo/dw1000_api_msp430fr2476/decadriver" --include_path="/home/steve/qorvo/dw1000_api_msp430fr2476/tests/spi_test" --include_path="/home/steve/qorvo/dw1000_api_msp430fr2476/tests/spi_test/driverlib/MSP430FR2xx_4xx" --include_path="/home/steve/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config="all" --define=__MSP430FR2476__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
- 
->> Compilation failure
-subdir_rules.mk:7: recipe for target 'main.obj' failed
-"../main.c", line 3: fatal error #1965: cannot open source file "sleep.h"
-1 catastrophic error detected in the compilation of "../main.c".
-Compilation terminated.
-gmake: *** [main.obj] Error 1
-gmake: Target 'all' not remade because of errors.
+gmake[1]: 'spi_test.out' is up to date.
 
 **** Build Finished ****
