@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "deca_types.h": "c",
+        "deca_device_api.h": "c"
+    }
+}

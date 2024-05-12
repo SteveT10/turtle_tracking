@@ -6,6 +6,7 @@
  * @version 4-28-2024
  */
 #include "deca_device_api.h"
+#include "mutex.h"
 #include <driverlib.h>
 
 //NOTE: Untested. I do not know if this file works completely.

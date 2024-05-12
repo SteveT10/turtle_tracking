@@ -20,7 +20,7 @@
  * @version 4-28-2024
  */
 #include "deca_device_api.h"
-#include "spi.h"
+#include "deca_spi.h"
 #include <driverlib.h>
 #include <stdint.h>
 
@@ -29,6 +29,7 @@ int main(void) {
     WDT_A_hold(WDT_A_BASE);
 
     initSpi(GPIO_PORT_P5, GPIO_PIN0 + GPIO_PIN1 + GPIO_PIN2, GPIO_PORT_P4, GPIO_PIN7);
+    setSpiRateLow();
     uint8_t buf[] = "header";
     uint8_t buf2[] = "body";
     while(1) {
