@@ -1,0 +1,17 @@
+external_api_fulltest over interface: HAL_SPI_DRDY
+dwm_pos_set(&pos_set):			fail
+dwm_pos_get(&pos_get):			fail
+dwm_loc_get(&loc):			fail
+dwm_upd_rate_set(ur, ur_s):			fail
+dwm_upd_rate_get(&ur, &ur_s):			fail
+dwm_cfg_tag_set(&cfg_tag):			fail
+dwm_cfg_anchor_set(&cfg_an):			fail
+dwm_reset():			fail
+dwm_cfg_get(&cfg_node):			fail
+dwm_ver_get(&ver):			fail
+dwm_gpio_cfg_input:			fail
+dwm_gpio_cfg_output:			fail
+dwm_gpio_value_set:			fail
+dwm_gpio_value_get:			fail
+dwm_gpio_value_toggle:			fail
+dwm_status_get(&status):			fail

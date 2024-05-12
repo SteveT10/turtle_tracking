@@ -1,0 +1,45 @@
+dwm_init(): dev0
+	LMH_SPIRX_Init(): SPI dev0...
+	SPI0: spi mode: 0
+	SPI0: bits per word: 8
+	SPI0: max speed: 8000000 Hz (8000 KHz)
+	SPI0: Reseting DWM1001 to SPI:IDLE 
+	SPI: Tx 1 bytes: 0xff
+	SPI0: Wait 10 ms...
+	SPI: Tx 1 bytes: 0xff
+	SPI0: Wait 10 ms...
+	SPI: Tx 1 bytes: 0xff
+	SPI0: Wait 10 ms...
+	LMH: LMH_SPIRX_Init for SPI dev0 done.
+Setting to anchor: dev0.
+dwm_cfg_anchor_set(&cfg_anchor): dev0.
+	SPI: Tx 3 bytes: 0x0701bc
+	SPI0: Rx step 1: 
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0xff
+	SPI0: Rx step 2: 
+	SPI0: Wait 10 ms...
+	SPI: Rx 255 bytes: 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+	SPI0: Wait 10 ms...
+	HAL_SPI: ERROR: RET_VAL type wrong: 255
+Wait 2s for node to reset
+Getting configurations: dev0.
+	SPI: Tx 2 bytes: 0x0800
+	SPI0: Rx step 1: 
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0xff
+	SPI0: Rx step 2: 
+	SPI0: Wait 10 ms...
+	SPI: Rx 255 bytes: 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+	SPI0: Wait 10 ms...
+	HAL_SPI: ERROR: RET_VAL type wrong: 255
+Comparing set vs. get: dev0.
+initiator           cfg_anchor=1 : cfg_node=214
+bridge              cfg_anchor=0 : cfg_node=56
+common.led_en       cfg_anchor=1 : cfg_node=252
+common.ble_en       cfg_anchor=1 : cfg_node=84
+common.uwb_mode     cfg_anchor=0 : cfg_node=1
+common.fw_update_en cfg_anchor=1 : cfg_node=76
+
+Configuration failed.
+

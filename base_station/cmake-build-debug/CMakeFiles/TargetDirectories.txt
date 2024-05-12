@@ -1,3 +1,0 @@
-C:/Users/SoulAndAnyaPC/Documents/Projects/Senior_Design/turtle_tracking/base_station/cmake-build-debug/CMakeFiles/base_station.dir
-C:/Users/SoulAndAnyaPC/Documents/Projects/Senior_Design/turtle_tracking/base_station/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/SoulAndAnyaPC/Documents/Projects/Senior_Design/turtle_tracking/base_station/cmake-build-debug/CMakeFiles/rebuild_cache.dir

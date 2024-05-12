@@ -1,0 +1,881 @@
+Initializing...
+	LMH_SPIRX_DRDY_Init(): SPI dev0...
+	SPI0: spi mode: 0
+	SPI0: bits per word: 8
+	SPI0: max speed: 8000000 Hz (8000 KHz)
+	SPI0: Reseting DWM1001 to SPI:IDLE 
+	SPI: Tx 1 bytes: 0xff
+	SPI0: Wait 10 ms...
+	SPI: Tx 1 bytes: 0xff
+	SPI0: Wait 10 ms...
+	SPI: Tx 1 bytes: 0xff
+	SPI0: Wait 10 ms...
+	LMH: LMH_SPIRX_Init for SPI dev0 done.
+	SPI: Tx 3 bytes: 0x340102
+	SPI0: Rx step 1: 
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Wait 10 ms...
+	SPI: Rx 1 bytes: 0x00
+	SPI0: Rx step 2: 
+	SPI0: Wait 10 ms...
+	SPI0: Wait 10 ms...
+	HAL_SPI_DRDY: ERROR: RET_VAL type wrong: 0
+LMH_SPIRX_DRDY_IntCfg() failed. 	 >>>>>> Error <<<<<<
+Done
+dwm_pos_set(pos_set)
+	SPI: Tx 15 bytes: 0x010d7900000032000000fb00000064
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_pos_get(&pos_get)
+	SPI: Tx 2 bytes: 0x0200
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_loc_get(&loc)
+	SPI: Tx 2 bytes: 0x0c00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_upd_rate_set(22, 50)
+	SPI: Tx 6 bytes: 0x030416003200
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_upd_rate_get(&ur, &ur_s)
+	SPI: Tx 2 bytes: 0x0400
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_cfg_tag_set(&cfg_tag)
+	SPI: Tx 4 bytes: 0x05026204
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_cfg_anchor_set(&cfg_an)
+	SPI: Tx 3 bytes: 0x0701ac
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+	SPI: Tx 2 bytes: 0x1400
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+Wait 1s for node to reset.
+dwm_cfg_get(&cfg_node):
+	SPI: Tx 2 bytes: 0x0800
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_ver_get(&ver)
+	SPI: Tx 2 bytes: 0x1500
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input:
+dwm_gpio_cfg_input(2, 0)
+	SPI: Tx 4 bytes: 0x29020200
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(2, 1)
+	SPI: Tx 4 bytes: 0x29020201
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(2, 3)
+	SPI: Tx 4 bytes: 0x29020203
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(8, 0)
+	SPI: Tx 4 bytes: 0x29020800
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(8, 1)
+	SPI: Tx 4 bytes: 0x29020801
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(8, 3)
+	SPI: Tx 4 bytes: 0x29020803
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(9, 0)
+	SPI: Tx 4 bytes: 0x29020900
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(9, 1)
+	SPI: Tx 4 bytes: 0x29020901
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(9, 3)
+	SPI: Tx 4 bytes: 0x29020903
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(10, 0)
+	SPI: Tx 4 bytes: 0x29020a00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(10, 1)
+	SPI: Tx 4 bytes: 0x29020a01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(10, 3)
+	SPI: Tx 4 bytes: 0x29020a03
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(12, 0)
+	SPI: Tx 4 bytes: 0x29020c00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(12, 1)
+	SPI: Tx 4 bytes: 0x29020c01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(12, 3)
+	SPI: Tx 4 bytes: 0x29020c03
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(13, 0)
+	SPI: Tx 4 bytes: 0x29020d00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(13, 1)
+	SPI: Tx 4 bytes: 0x29020d01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(13, 3)
+	SPI: Tx 4 bytes: 0x29020d03
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(14, 0)
+	SPI: Tx 4 bytes: 0x29020e00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(14, 1)
+	SPI: Tx 4 bytes: 0x29020e01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(14, 3)
+	SPI: Tx 4 bytes: 0x29020e03
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(15, 0)
+	SPI: Tx 4 bytes: 0x29020f00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(15, 1)
+	SPI: Tx 4 bytes: 0x29020f01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(15, 3)
+	SPI: Tx 4 bytes: 0x29020f03
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(22, 0)
+	SPI: Tx 4 bytes: 0x29021600
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(22, 1)
+	SPI: Tx 4 bytes: 0x29021601
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(22, 3)
+	SPI: Tx 4 bytes: 0x29021603
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(23, 0)
+	SPI: Tx 4 bytes: 0x29021700
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(23, 1)
+	SPI: Tx 4 bytes: 0x29021701
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(23, 3)
+	SPI: Tx 4 bytes: 0x29021703
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(27, 0)
+	SPI: Tx 4 bytes: 0x29021b00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(27, 1)
+	SPI: Tx 4 bytes: 0x29021b01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(27, 3)
+	SPI: Tx 4 bytes: 0x29021b03
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(30, 0)
+	SPI: Tx 4 bytes: 0x29021e00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(30, 1)
+	SPI: Tx 4 bytes: 0x29021e01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(30, 3)
+	SPI: Tx 4 bytes: 0x29021e03
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(31, 0)
+	SPI: Tx 4 bytes: 0x29021f00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(31, 1)
+	SPI: Tx 4 bytes: 0x29021f01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_input(31, 3)
+	SPI: Tx 4 bytes: 0x29021f03
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output:
+dwm_gpio_cfg_output(2, 0)
+	SPI: Tx 4 bytes: 0x28020200
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(2, 1)
+	SPI: Tx 4 bytes: 0x28020201
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(8, 0)
+	SPI: Tx 4 bytes: 0x28020800
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(8, 1)
+	SPI: Tx 4 bytes: 0x28020801
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(9, 0)
+	SPI: Tx 4 bytes: 0x28020900
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(9, 1)
+	SPI: Tx 4 bytes: 0x28020901
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(10, 0)
+	SPI: Tx 4 bytes: 0x28020a00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(10, 1)
+	SPI: Tx 4 bytes: 0x28020a01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(12, 0)
+	SPI: Tx 4 bytes: 0x28020c00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(12, 1)
+	SPI: Tx 4 bytes: 0x28020c01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(13, 0)
+	SPI: Tx 4 bytes: 0x28020d00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(13, 1)
+	SPI: Tx 4 bytes: 0x28020d01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(14, 0)
+	SPI: Tx 4 bytes: 0x28020e00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(14, 1)
+	SPI: Tx 4 bytes: 0x28020e01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(15, 0)
+	SPI: Tx 4 bytes: 0x28020f00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(15, 1)
+	SPI: Tx 4 bytes: 0x28020f01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(22, 0)
+	SPI: Tx 4 bytes: 0x28021600
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(22, 1)
+	SPI: Tx 4 bytes: 0x28021601
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(23, 0)
+	SPI: Tx 4 bytes: 0x28021700
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(23, 1)
+	SPI: Tx 4 bytes: 0x28021701
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(27, 0)
+	SPI: Tx 4 bytes: 0x28021b00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(27, 1)
+	SPI: Tx 4 bytes: 0x28021b01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(30, 0)
+	SPI: Tx 4 bytes: 0x28021e00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(30, 1)
+	SPI: Tx 4 bytes: 0x28021e01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(31, 0)
+	SPI: Tx 4 bytes: 0x28021f00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_cfg_output(31, 1)
+	SPI: Tx 4 bytes: 0x28021f01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set:
+dwm_gpio_value_set(2, 0)
+	SPI: Tx 4 bytes: 0x2a020200
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(2, 1)
+	SPI: Tx 4 bytes: 0x2a020201
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(8, 0)
+	SPI: Tx 4 bytes: 0x2a020800
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(8, 1)
+	SPI: Tx 4 bytes: 0x2a020801
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(9, 0)
+	SPI: Tx 4 bytes: 0x2a020900
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(9, 1)
+	SPI: Tx 4 bytes: 0x2a020901
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(10, 0)
+	SPI: Tx 4 bytes: 0x2a020a00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(10, 1)
+	SPI: Tx 4 bytes: 0x2a020a01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(12, 0)
+	SPI: Tx 4 bytes: 0x2a020c00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(12, 1)
+	SPI: Tx 4 bytes: 0x2a020c01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(13, 0)
+	SPI: Tx 4 bytes: 0x2a020d00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(13, 1)
+	SPI: Tx 4 bytes: 0x2a020d01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(14, 0)
+	SPI: Tx 4 bytes: 0x2a020e00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(14, 1)
+	SPI: Tx 4 bytes: 0x2a020e01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(15, 0)
+	SPI: Tx 4 bytes: 0x2a020f00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(15, 1)
+	SPI: Tx 4 bytes: 0x2a020f01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(22, 0)
+	SPI: Tx 4 bytes: 0x2a021600
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(22, 1)
+	SPI: Tx 4 bytes: 0x2a021601
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(23, 0)
+	SPI: Tx 4 bytes: 0x2a021700
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(23, 1)
+	SPI: Tx 4 bytes: 0x2a021701
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(27, 0)
+	SPI: Tx 4 bytes: 0x2a021b00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(27, 1)
+	SPI: Tx 4 bytes: 0x2a021b01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(30, 0)
+	SPI: Tx 4 bytes: 0x2a021e00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(30, 1)
+	SPI: Tx 4 bytes: 0x2a021e01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(31, 0)
+	SPI: Tx 4 bytes: 0x2a021f00
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_set(31, 1)
+	SPI: Tx 4 bytes: 0x2a021f01
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_get:
+dwm_gpio_value_get(2, &val)
+	SPI: Tx 3 bytes: 0x2b0102
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_get(8, &val)
+	SPI: Tx 3 bytes: 0x2b0108
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_get(9, &val)
+	SPI: Tx 3 bytes: 0x2b0109
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_get(10, &val)
+	SPI: Tx 3 bytes: 0x2b010a
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_get(12, &val)
+	SPI: Tx 3 bytes: 0x2b010c
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_get(13, &val)
+	SPI: Tx 3 bytes: 0x2b010d
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_get(14, &val)
+	SPI: Tx 3 bytes: 0x2b010e
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_get(15, &val)
+	SPI: Tx 3 bytes: 0x2b010f
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_get(22, &val)
+	SPI: Tx 3 bytes: 0x2b0116
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_get(23, &val)
+	SPI: Tx 3 bytes: 0x2b0117
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_get(27, &val)
+	SPI: Tx 3 bytes: 0x2b011b
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_get(30, &val)
+	SPI: Tx 3 bytes: 0x2b011e
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_get(31, &val)
+	SPI: Tx 3 bytes: 0x2b011f
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_toggle
+dwm_gpio_value_toggle(2, &val)
+	SPI: Tx 3 bytes: 0x2c0102
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_toggle(8, &val)
+	SPI: Tx 3 bytes: 0x2c0108
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_toggle(9, &val)
+	SPI: Tx 3 bytes: 0x2c0109
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_toggle(10, &val)
+	SPI: Tx 3 bytes: 0x2c010a
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_toggle(12, &val)
+	SPI: Tx 3 bytes: 0x2c010c
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_toggle(13, &val)
+	SPI: Tx 3 bytes: 0x2c010d
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_toggle(14, &val)
+	SPI: Tx 3 bytes: 0x2c010e
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_toggle(15, &val)
+	SPI: Tx 3 bytes: 0x2c010f
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_toggle(22, &val)
+	SPI: Tx 3 bytes: 0x2c0116
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_toggle(23, &val)
+	SPI: Tx 3 bytes: 0x2c0117
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_toggle(27, &val)
+	SPI: Tx 3 bytes: 0x2c011b
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_toggle(30, &val)
+	SPI: Tx 3 bytes: 0x2c011e
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_gpio_value_toggle(31, &val)
+	SPI: Tx 3 bytes: 0x2c011f
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_status_get(&status)
+	SPI: Tx 2 bytes: 0x3200
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_int_cfg(2)
+	SPI: Tx 3 bytes: 0x340102
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+dwm_reset()
+	SPI: Tx 2 bytes: 0x1400
+	SPI: LMH_SPIRX_DRDY dev0 not initialized. >>>>>> Error <<<<<<
+Check Tx&Rx:
+Fail
+Wait 1s for node to reset.
+
+Total = 130 
+   OK = 0 
+ Fail = 130 
