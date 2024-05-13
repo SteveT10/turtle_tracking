@@ -3,7 +3,8 @@
 
 #Ignore Build files for Tags
 /drivers/dw1000_api_msp430fr2476/**/Debug
-/drivers/dw1000_api_msp430fr2476/**/Launch
+/drivers/dw1000_api_msp430fr2476/**/.launches
+/drivers/dw1000_api_msp430fr2476/**/.settings
 .jxbrowser.userdata*
 .metadata*
 /drivers/dw1000_api_msp430fr2476/**/dvt

@@ -44,17 +44,14 @@ int readfromspi(uint16 headerLength, const uint8 *headerBuffer, uint32 bodyLengt
     uint16 i;
 
     setCsPin(0);
-    deca_sleep(1);
     for(i = 0; i < headerLength; i++) {
         EUSCI_A_SPI_transmitData(EUSCI_A0_BASE, *headerBuffer);
         headerBuffer++;
-        deca_sleep(1);
     }
     
     for(i = 0; i < bodyLength; i++) {
         *bodyBuffer = EUSCI_A_SPI_receiveData(EUSCI_A0_BASE);
         bodyBuffer++;
-        deca_sleep(1);
     }
     setCsPin(1);
     if(UCA0STATW & (UCOE | UCFE)) {//If Error occurred.
