@@ -6,3 +6,6 @@
 /drivers/dw1000_api_msp430fr2476/**/Launch
 .jxbrowser.userdata*
 .metadata*
+
+/drivers/dw1000_api_msp430fr2476/tests/.jxbrowser.userdata
+/drivers/dw1000_api_msp430fr2476/tests/.metadata
