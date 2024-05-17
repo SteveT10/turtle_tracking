@@ -40,7 +40,15 @@ function sendMessage(tagId, position) {
     const authToken = "94ca666b8ba495e952965fbe7fff4cee";
     const fromNumber = "+18449845241";
     const numbers = ["+13476152471", "+14255247294", "+12064840896", "+12065046494"];
-    const message = `Tag ${tagId} is out of boundary at position (${position.x.toFixed(2)}, ${position.y.toFixed(2)}, ${position.z.toFixed(2)})`;
+
+    // make sure thay are not nan
+    if (isNaN(position.x) || isNaN(position.y) || isNaN(position.z)) {
+        return;
+    }
+    
+    let message = "Hello from Pond Turtle Monitoring System! Tag " + tagId + " is out of boundary at position (" + position.x + ", " + position.y + ", " + position.z + "). Please check it out!";
+
+    // `Tag ${tagId} is out of boundary at position (${position.x.toFixed(2)}, ${position.y.toFixed(2)}, ${position.z.toFixed(2)})`;
 
     numbers.forEach(function(toNumber) {
         $.ajax({
@@ -606,7 +614,7 @@ function nodePositionSet(id, x, y, z, quality, immediate)
 
     if (!isTagWithinBoundary(position)) {
         console.warn(`Tag ${id} is out of boundary at position (${position.x}, ${position.y}, ${position.z})`);
-        // sendMessage(id, position);
+        sendMessage(id, position);
     }
 
 
