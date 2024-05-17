@@ -9,14 +9,13 @@
  * Copyright (c) 2016-2018, LEAPS. All rights reserved.
  *
  */
+const boundary = {
+    xMin: 0, xMax: 100,
+    yMin: 0, yMax: 100,
+    zMin: 0, zMax: 100
+};
 
 function isTagWithinBoundary(position) {
-    const boundary = {
-        xMin: 0, xMax: 100,
-        yMin: 0, yMax: 100,
-        zMin: 0, zMax: 100
-    };
-
     return position.x >= boundary.xMin && position.x <= boundary.xMax &&
            position.y >= boundary.yMin && position.y <= boundary.yMax &&
            position.z >= boundary.zMin && position.z <= boundary.zMax;
@@ -35,7 +34,6 @@ function drawBoundary() {
     const line = new THREE.Line(geometry, material);
     scene.add(line);
 }
-
 
 function sendMessage(tagId, position) {
     const accountSid = "AC595211c5deab5bd9d19e0c1764cb4c7b";
