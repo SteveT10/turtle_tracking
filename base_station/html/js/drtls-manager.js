@@ -9,31 +9,44 @@
  * Copyright (c) 2016-2018, LEAPS. All rights reserved.
  *
  */
+
 const boundary = {
     xMin: 0, xMax: 100,
-    yMin: 0, yMax: 100,
-    zMin: 0, zMax: 100
+    yMin: 0, yMax: 100
 };
-
 function isTagWithinBoundary(position) {
     return position.x >= boundary.xMin && position.x <= boundary.xMax &&
-           position.y >= boundary.yMin && position.y <= boundary.yMax &&
-           position.z >= boundary.zMin && position.z <= boundary.zMax;
+           position.y >= boundary.yMin && position.y <= boundary.yMax;
 }
 
 function drawBoundary() {
-    const geometry = new THREE.Geometry();
-    const material = new THREE.LineBasicMaterial({ color: 0xff0000 }); // color red
+    const shape = new THREE.Shape();
+    shape.moveTo(boundary.xMin, boundary.yMin);
+    shape.lineTo(boundary.xMax, boundary.yMin);
+    shape.lineTo(boundary.xMax, boundary.yMax);
+    shape.lineTo(boundary.xMin, boundary.yMax);
+    shape.lineTo(boundary.xMin, boundary.yMin);
 
-    geometry.vertices.push(new THREE.Vector3(boundary.xMin, boundary.yMin, boundary.zMin));
-    geometry.vertices.push(new THREE.Vector3(boundary.xMax, boundary.yMin, boundary.zMin));
-    geometry.vertices.push(new THREE.Vector3(boundary.xMax, boundary.yMax, boundary.zMin));
-    geometry.vertices.push(new THREE.Vector3(boundary.xMin, boundary.yMax, boundary.zMin));
-    geometry.vertices.push(new THREE.Vector3(boundary.xMin, boundary.yMin, boundary.zMin)); 
+    const geometry = new THREE.ShapeGeometry(shape);
+    const material = new THREE.MeshBasicMaterial({ 
+        color: 0xffcccc, 
+        side: THREE.DoubleSide, 
+        opacity: 0.5, 
+        transparent: true 
+    });
+    const mesh = new THREE.Mesh(geometry, material);
 
-    const line = new THREE.Line(geometry, material);
-    scene.add(line);
+    const borderMaterial = new THREE.LineBasicMaterial({ 
+        color: 0xff0000, 
+        linewidth: 2 
+    });
+    const borderGeometry = new THREE.BufferGeometry().setFromPoints(shape.getPoints());
+    const border = new THREE.Line(borderGeometry, borderMaterial);
+
+    scene.add(mesh);
+    scene.add(border);
 }
+
 
 function sendMessage(tagId, position) {
     const accountSid = "AC595211c5deab5bd9d19e0c1764cb4c7b";
@@ -391,7 +404,8 @@ var renderer = new THREE.WebGLRenderer({
 });
 renderer.setSize(sceneWidth, sceneHeight);
 renderer.setClearColor(0xffffff);
-document.getElementById('scene').appendChild(renderer.domElement);
+
+drawBoundary();
 
 scene.add(new THREE.AmbientLight(0xf0f0f0));
 
