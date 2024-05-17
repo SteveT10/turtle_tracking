@@ -22,6 +22,21 @@ function isTagWithinBoundary(position) {
            position.z >= boundary.zMin && position.z <= boundary.zMax;
 }
 
+function drawBoundary() {
+    const geometry = new THREE.Geometry();
+    const material = new THREE.LineBasicMaterial({ color: 0xff0000 }); // color red
+
+    geometry.vertices.push(new THREE.Vector3(boundary.xMin, boundary.yMin, boundary.zMin));
+    geometry.vertices.push(new THREE.Vector3(boundary.xMax, boundary.yMin, boundary.zMin));
+    geometry.vertices.push(new THREE.Vector3(boundary.xMax, boundary.yMax, boundary.zMin));
+    geometry.vertices.push(new THREE.Vector3(boundary.xMin, boundary.yMax, boundary.zMin));
+    geometry.vertices.push(new THREE.Vector3(boundary.xMin, boundary.yMin, boundary.zMin)); 
+
+    const line = new THREE.Line(geometry, material);
+    scene.add(line);
+}
+
+
 function sendMessage(tagId, position) {
     const accountSid = "AC595211c5deab5bd9d19e0c1764cb4c7b";
     const authToken = "94ca666b8ba495e952965fbe7fff4cee";
@@ -2299,4 +2314,5 @@ $(function(){
     });
     window.addEventListener('click', mouseClick, false);
     loadWorld('img/plans/connections.json','img/plans/world.json', 'img/plans/floorplan.png');
+    drawBoundary(); 
 });
