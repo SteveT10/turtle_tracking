@@ -10,23 +10,31 @@
  *
  */
 
-const boundary = {
-    xMin: 0, xMax: 100,
-    yMin: 0, yMax: 100
-};
-
 function isTagWithinBoundary(position) {
+    const boundary = {
+        xMin: 0, xMax: 100,
+        yMin: 0, yMax: 100,
+        zMin: 0, zMax: 100
+    };
+
     return position.x >= boundary.xMin && position.x <= boundary.xMax &&
-           position.y >= boundary.yMin && position.y <= boundary.yMax;
+           position.y >= boundary.yMin && position.y <= boundary.yMax &&
+           position.z >= boundary.zMin && position.z <= boundary.zMax;
 }
 
 function drawBoundary() {
+    const boundary = {
+        xMin: 0, xMax: 100,
+        yMin: 0, yMax: 100,
+        zMin: 0, zMax: 0 
+    };
+
     const shape = new THREE.Shape();
     shape.moveTo(boundary.xMin, boundary.yMin);
     shape.lineTo(boundary.xMax, boundary.yMin);
     shape.lineTo(boundary.xMax, boundary.yMax);
     shape.lineTo(boundary.xMin, boundary.yMax);
-    shape.lineTo(boundary.xMin, boundary.yMin);
+    shape.lineTo(boundary.xMin, boundary.yMin); 
 
     const geometry = new THREE.ShapeGeometry(shape);
     const material = new THREE.MeshBasicMaterial({ 
@@ -47,6 +55,8 @@ function drawBoundary() {
     scene.add(mesh);
     scene.add(border);
 }
+
+
 
 function sendMessage(tagId, position) {
     const accountSid = "AC595211c5deab5bd9d19e0c1764cb4c7b";
@@ -405,7 +415,7 @@ var renderer = new THREE.WebGLRenderer({
 renderer.setSize(sceneWidth, sceneHeight);
 renderer.setClearColor(0xffffff);
 
-// drawBoundary();
+drawBoundary();
 
 scene.add(new THREE.AmbientLight(0xf0f0f0));
 
@@ -2326,5 +2336,5 @@ $(function(){
     });
     window.addEventListener('click', mouseClick, false);
     loadWorld('img/plans/connections.json','img/plans/world.json', 'img/plans/floorplan.png');
-    // drawBoundary(); 
+    drawBoundary(); 
 });
