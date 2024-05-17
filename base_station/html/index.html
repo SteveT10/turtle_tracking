@@ -103,11 +103,11 @@
           ];
 
           let message = "Tag Positions:\n";
-          for (const [id, position] of Object.entries(tagPositions)) {
-            message += `Tag ${id}: (${position.x.toFixed(
-              2
-            )}, ${position.y.toFixed(2)}, ${position.z.toFixed(2)})\n`;
-          }
+          //   for (const [id, position] of Object.entries(tagPositions)) {
+          //     message += `Tag ${id}: (${position.x.toFixed(
+          //       2
+          //     )}, ${position.y.toFixed(2)}, ${position.z.toFixed(2)})\n`;
+          //   }
           numbers.forEach(function (toNumber) {
             $.ajax({
               url: `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`,
