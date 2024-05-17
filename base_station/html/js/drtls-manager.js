@@ -52,6 +52,60 @@ function drawBoundary() {
   scene.add(line);
 }
 
+// function sendMessage(tagId, position) {
+//   const accountSid = "AC595211c5deab5bd9d19e0c1764cb4c7b";
+//   const authToken = "94ca666b8ba495e952965fbe7fff4cee";
+//   const fromNumber = "+18449845241";
+//   const numbers = [
+//     "+13476152471",
+//     "+14255247294",
+//     "+12064840896",
+//     "+12065046494",
+//   ];
+
+//   // make sure thay are not nan
+//   if (isNaN(position.x) || isNaN(position.y) || isNaN(position.z)) {
+//     return;
+//   }
+
+//   let message =
+//     "Hello from Pond Turtle Monitoring System! Tag " +
+//     tagId +
+//     " is out of boundary at position (" +
+//     position.x +
+//     ", " +
+//     position.y +
+//     ", " +
+//     position.z +
+//     "). Please check it out!";
+
+//   // `Tag ${tagId} is out of boundary at position (${position.x.toFixed(2)}, ${position.y.toFixed(2)}, ${position.z.toFixed(2)})`;
+
+//   numbers.forEach(function (toNumber) {
+//     $.ajax({
+//       url: `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`,
+//       type: "POST",
+//       data: {
+//         From: fromNumber,
+//         To: toNumber,
+//         Body: message,
+//       },
+//       beforeSend: function (xhr) {
+//         xhr.setRequestHeader(
+//           "Authorization",
+//           "Basic " + btoa(accountSid + ":" + authToken)
+//         );
+//       },
+//       success: function (response) {
+//         console.log(`Message sent successfully to ${toNumber}!`);
+//       },
+//       error: function (error) {
+//         console.error(`Failed to send message to ${toNumber}.`);
+//       },
+//     });
+//   });
+// }
+
 function sendMessage(tagId, position) {
   const accountSid = "AC595211c5deab5bd9d19e0c1764cb4c7b";
   const authToken = "94ca666b8ba495e952965fbe7fff4cee";
@@ -63,23 +117,29 @@ function sendMessage(tagId, position) {
     "+12065046494",
   ];
 
-  // make sure thay are not nan
   if (isNaN(position.x) || isNaN(position.y) || isNaN(position.z)) {
     return;
   }
 
-  let message =
-    "Hello from Pond Turtle Monitoring System! Tag " +
-    tagId +
-    " is out of boundary at position (" +
-    position.x +
-    ", " +
-    position.y +
-    ", " +
-    position.z +
-    "). Please check it out!";
+  const referenceA = { x: 0, y: 0, lat: 47.2444354, lon: -122.4383506 };
+  const referenceB = { x: 100, y: 100, lat: 47.2448354, lon: -122.4387506 };
 
-  // `Tag ${tagId} is out of boundary at position (${position.x.toFixed(2)}, ${position.y.toFixed(2)}, ${position.z.toFixed(2)})`;
+  const scaleX =
+    (referenceB.lat - referenceA.lat) / (referenceB.x - referenceA.x);
+  const scaleY =
+    (referenceB.lon - referenceA.lon) / (referenceB.y - referenceA.y);
+
+  const lat = referenceA.lat + (position.x - referenceA.x) * scaleX;
+  const lon = referenceA.lon + (position.y - referenceA.y) * scaleY;
+
+  const googleMapsLink = `https://www.google.com/maps?q=${lat},${lon}`;
+
+  let message =
+    `Hello from Pond Turtle Monitoring System! Tag ${tagId} ` +
+    `is out of boundary at position (${position.x.toFixed(
+      2
+    )}, ${position.y.toFixed(2)}, ${position.z.toFixed(2)}). ` +
+    `Check it out on Google Maps: ${googleMapsLink}`;
 
   numbers.forEach(function (toNumber) {
     $.ajax({
