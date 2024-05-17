@@ -395,6 +395,7 @@ document.getElementById('scene').appendChild(renderer.domElement);
 
 scene.add(new THREE.AmbientLight(0xf0f0f0));
 
+drawBoundary();
 // tracing configuration
 var trace = false,
     traceDistance = 0.25,
