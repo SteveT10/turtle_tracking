@@ -16,7 +16,10 @@
     <link rel="stylesheet" href="3rdps/css/jquery-ui.min.css" />
     <link rel="stylesheet" href="css/drtls-manager.css?2018-07-08" />
     <style>
-      .logo {
+      .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-family: "Arial", sans-serif;
         font-size: 3em;
         color: #4b2e83;
@@ -26,11 +29,24 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
+      .logo {
+        margin-right: 15px;
+        width: 50px;
+        height: 50px;
+      }
     </style>
   </head>
   <body>
     <div id="scene">
-      <h2 class="logo">Turtle Tracking System</h2>
+      <div class="logo-container">
+        <img
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIALoAxwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABwgEBQYDAgH/xABKEAABAwICAwoKBQkJAQAAAAABAAIDBBEFEgYHIRMUFSIxQVGBkaFSVGFxkpOisbLwF1OUwfEjMjM0NUJic9EWNkNV..."
+          alt="UW Logo"
+          class="logo"
+        />
+        <span>Turtle Tracking: Team 7 UW</span>
+      </div>
+
       <div id="buttons">
         <div id="hamburger">
           <button id="button-hamburger">
