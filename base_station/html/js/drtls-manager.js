@@ -10,27 +10,47 @@
  *
  */
 
-var boundary = {
-    xMin: 0,
-    xMax: 100,
-    yMin: 0,
-    yMax: 100
-};
-
 function isTagWithinBoundary(position) {
-    return position?.x >= boundary.xMin && position?.x <= boundary.xMax &&
-           position?.y >= boundary.yMin && position?.y <= boundary.yMax;
+    const boundary = {
+        xMin: 0, xMax: 100,
+        yMin: 0, yMax: 100,
+        zMin: 0, zMax: 100
+    };
+
+    return position.x >= boundary.xMin && position.x <= boundary.xMax &&
+           position.y >= boundary.yMin && position.y <= boundary.yMax &&
+           position.z >= boundary.zMin && position.z <= boundary.zMax;
 }
 
-function displayBoundaryAlert(tagId) {
-    // Assuming there's a div for alerts in your HTML
-    var alertDiv = document.getElementById('alertDiv');
-    alertDiv.innerHTML = `Warning: Tag ${tagId} has moved out of the designated area.`;
-    alertDiv.style.display = 'block'; // Make the alert visible
+function sendMessage(tagId, position) {
+    const accountSid = "AC595211c5deab5bd9d19e0c1764cb4c7b";
+    const authToken = "94ca666b8ba495e952965fbe7fff4cee";
+    const fromNumber = "+18449845241";
+    const numbers = ["+13476152471", "+14255247294", "+12064840896", "+12065046494"];
+    const message = `Tag ${tagId} is out of boundary at position (${position.x.toFixed(2)}, ${position.y.toFixed(2)}, ${position.z.toFixed(2)})`;
+
+    numbers.forEach(function(toNumber) {
+        $.ajax({
+            url: `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`,
+            type: 'POST',
+            data: {
+                From: fromNumber,
+                To: toNumber,
+                Body: message
+            },
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('Authorization', 'Basic ' + btoa(accountSid + ':' + authToken));
+            },
+            success: function(response) {
+                console.log(`Message sent successfully to ${toNumber}!`);
+            },
+            error: function(error) {
+                console.error(`Failed to send message to ${toNumber}.`);
+            }
+        });
+    });
 }
 
-
-var tagPositions = {};
 
 var topicPrefix = 'dwm',        // MQTT topic prefix
     connectionAttempt = 0,      // current connect attempt
@@ -568,8 +588,11 @@ function nodePositionSet(id, x, y, z, quality, immediate)
 
     tagPositions[id] = position;
 
-    if (position && !isTagWithinBoundary(position)) {
-        console.log(`Tag ${id} is out of boundary at position ${position?.x}, ${position?.y}`);
+    console.log("Tag position: ", position);
+
+    if (!isTagWithinBoundary(position)) {
+        console.warn(`Tag ${id} is out of boundary at position (${position.x}, ${position.y}, ${position.z})`);
+        // sendMessage(id, position);
     }
 
 
