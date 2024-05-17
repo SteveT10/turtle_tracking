@@ -14,6 +14,7 @@ const boundary = {
     xMin: 0, xMax: 100,
     yMin: 0, yMax: 100
 };
+
 function isTagWithinBoundary(position) {
     return position.x >= boundary.xMin && position.x <= boundary.xMax &&
            position.y >= boundary.yMin && position.y <= boundary.yMax;
@@ -46,7 +47,6 @@ function drawBoundary() {
     scene.add(mesh);
     scene.add(border);
 }
-
 
 function sendMessage(tagId, position) {
     const accountSid = "AC595211c5deab5bd9d19e0c1764cb4c7b";
@@ -2326,5 +2326,5 @@ $(function(){
     });
     window.addEventListener('click', mouseClick, false);
     loadWorld('img/plans/connections.json','img/plans/world.json', 'img/plans/floorplan.png');
-    drawBoundary(); 
+    // drawBoundary(); 
 });
