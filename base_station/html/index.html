@@ -33,6 +33,7 @@
                 </div>
                 <button id="button-ortho" title="Change between 2D and 3D views">2D view</button>
                 <button id="button-reset-view" title="Go back to initial view">Reset view</button>
+                <button id="button-send-message" title="Send a message using Twilio">Send Message</button>
             </div>
         </div>
         <div id="ui-right">
@@ -48,5 +49,77 @@
         <script src="3rdps/js/moment.min.js"></script>
         <script src="js/jqueryui-sorted-accordion.js"></script>
         <script src="js/drtls-manager.js"></script>
+
+        <script>
+
+
+$(document).ready(function() {
+    $('#button-send-message').click(function() {
+        const accountSid = 'AC595211c5deab5bd9d19e0c1764cb4c7b'; 
+        const authToken = '94ca666b8ba495e952965fbe7fff4cee';  
+        const fromNumber = '+18449845241';
+        const numbers = ["+13476152471", "+14255247294", "+12064840896", "+12065046494"];
+    
+
+        let message = 'Tag Positions:\n';
+        for (const [id, position] of Object.entries(tagPositions)) {
+            message += `Tag ${id}: (${position.x.toFixed(2)}, ${position.y.toFixed(2)}, ${position.z.toFixed(2)})\n`;
+        }
+        numbers.forEach(function(toNumber) {
+            $.ajax({
+                url: `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`,
+                type: 'POST',
+                data: {
+                    From: fromNumber,
+                    To: toNumber,
+                    Body: message
+                },
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader('Authorization', 'Basic ' + btoa(accountSid + ':' + authToken));
+                },
+                success: function(response) {
+                    console.log(`Message sent successfully to ${toNumber}!`);
+                },
+                error: function(error) {
+                    console.error(`Failed to send message to ${toNumber}.`);
+                }
+            });
+        });
+    });
+});
+
+
+
+            // $(document).ready(function() {
+            //     $('#button-send-message').click(function() {
+            //         const accountSid = 'AC595211c5deab5bd9d19e0c1764cb4c7b'; 
+            //         const authToken = '94ca666b8ba495e952965fbe7fff4cee';  
+            //         const fromNumber = '+18449845241';
+            //         const message = 'Hello, this is a test message from Twilio!';
+            //         const numbers = ["+13476152471", "+14255247294", "+12064840896", "+12065046494"];
+    
+            //         numbers.forEach(function(toNumber) {
+            //             $.ajax({
+            //                 url: `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`,
+            //                 type: 'POST',
+            //                 data: {
+            //                     From: fromNumber,
+            //                     To: toNumber,
+            //                     Body: message
+            //                 },
+            //                 beforeSend: function(xhr) {
+            //                     xhr.setRequestHeader('Authorization', 'Basic ' + btoa(accountSid + ':' + authToken));
+            //                 },
+            //                 success: function(response) {
+            //                     console.log(`Message sent successfully to ${toNumber}!`);
+            //                 },
+            //                 error: function(error) {
+            //                     console.error(`Failed to send message to ${toNumber}.`);
+            //                 }
+            //             });
+            //         });
+            //     });
+            // });
+        </script>
     </body>
 </html>

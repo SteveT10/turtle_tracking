@@ -22,6 +22,15 @@ function isTagWithinBoundary(position) {
            position?.y >= boundary.yMin && position?.y <= boundary.yMax;
 }
 
+function displayBoundaryAlert(tagId) {
+    // Assuming there's a div for alerts in your HTML
+    var alertDiv = document.getElementById('alertDiv');
+    alertDiv.innerHTML = `Warning: Tag ${tagId} has moved out of the designated area.`;
+    alertDiv.style.display = 'block'; // Make the alert visible
+}
+
+
+var tagPositions = {};
 
 var topicPrefix = 'dwm',        // MQTT topic prefix
     connectionAttempt = 0,      // current connect attempt
@@ -555,13 +564,12 @@ function dropTrace(node, force)
 
 function nodePositionSet(id, x, y, z, quality, immediate)
 {
-    alert(`update: ${id} ${x} ${y}`);
     var position = new THREE.Vector3(x, y, z);
 
+    tagPositions[id] = position;
+
     if (position && !isTagWithinBoundary(position)) {
-        console.log(`Tag ${id} is out of boundary at position ${position.x}, ${position.y}`);
-        alert.log(`Tag ${id} is out of boundary at position ${position.x}, ${position.y}`);
-        
+        console.log(`Tag ${id} is out of boundary at position ${position?.x}, ${position?.y}`);
     }
 
 
