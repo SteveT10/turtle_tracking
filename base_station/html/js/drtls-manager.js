@@ -366,6 +366,7 @@ function redrawAllNodesPosition() {
             var node = nodes[id];
             if ('rawPosition' in node.userData) {
                 var pos = node.userData.rawPosition;
+                console.log("redraw")
                 nodePositionSet(id, pos.x, pos.y, pos.z, pos.quality, true);
             }
         }
@@ -554,11 +555,12 @@ function dropTrace(node, force)
 
 function nodePositionSet(id, x, y, z, quality, immediate)
 {
-    console.log(`update: ${id} ${x} ${y}`);
+    alert(`update: ${id} ${x} ${y}`);
     var position = new THREE.Vector3(x, y, z);
 
     if (position && !isTagWithinBoundary(position)) {
-        console.warn(`Tag ${id} is out of boundary at position ${position.x}, ${position.y}`);
+        console.log(`Tag ${id} is out of boundary at position ${position.x}, ${position.y}`);
+        alert.log(`Tag ${id} is out of boundary at position ${position.x}, ${position.y}`);
         
     }
 
