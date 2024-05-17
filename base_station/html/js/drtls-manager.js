@@ -1,4 +1,7 @@
 /**
+ * Javascript modified by Souleymane Dembele on 05/03/2024
+ * 
+ * Thanks to example from 
  * LEAPS - Low Energy Accurate Positioning System.
  *
  * Main UI JS file.
@@ -6,6 +9,20 @@
  * Copyright (c) 2016-2018, LEAPS. All rights reserved.
  *
  */
+
+var boundary = {
+    xMin: 0,
+    xMax: 100,
+    yMin: 0,
+    yMax: 100
+};
+
+function isTagWithinBoundary(position) {
+    return position.x >= boundary.xMin && position.x <= boundary.xMax &&
+           position.y >= boundary.yMin && position.y <= boundary.yMax;
+}
+
+
 var topicPrefix = 'dwm',        // MQTT topic prefix
     connectionAttempt = 0,      // current connect attempt
     maxConnectionAttempts = 5,  // max connection attempts before giving up
@@ -537,6 +554,14 @@ function dropTrace(node, force)
 
 function nodePositionSet(id, x, y, z, quality, immediate)
 {
+    var position = new THREE.Vector3(x, y, z);
+
+    if (!isTagWithinBoundary(position)) {
+        console.warn(`Tag ${id} is out of boundary at position ${position.x}, ${position.y}`);
+        
+    }
+
+
     var illegalPosition = false;
     if(isNaN(x) || isNaN(y) || isNaN(z)) {
         illegalPosition = true;
