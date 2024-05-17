@@ -405,7 +405,7 @@ var renderer = new THREE.WebGLRenderer({
 renderer.setSize(sceneWidth, sceneHeight);
 renderer.setClearColor(0xffffff);
 
-drawBoundary();
+// drawBoundary();
 
 scene.add(new THREE.AmbientLight(0xf0f0f0));
 
