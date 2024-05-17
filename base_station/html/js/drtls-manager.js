@@ -18,8 +18,8 @@ var boundary = {
 };
 
 function isTagWithinBoundary(position) {
-    return position.x >= boundary.xMin && position.x <= boundary.xMax &&
-           position.y >= boundary.yMin && position.y <= boundary.yMax;
+    return position?.x >= boundary.xMin && position?.x <= boundary.xMax &&
+           position?.y >= boundary.yMin && position?.y <= boundary.yMax;
 }
 
 
@@ -557,7 +557,7 @@ function nodePositionSet(id, x, y, z, quality, immediate)
     console.log(`update: ${id} ${x} ${y}`);
     var position = new THREE.Vector3(x, y, z);
 
-    if (!isTagWithinBoundary(position)) {
+    if (position && !isTagWithinBoundary(position)) {
         console.warn(`Tag ${id} is out of boundary at position ${position.x}, ${position.y}`);
         
     }
