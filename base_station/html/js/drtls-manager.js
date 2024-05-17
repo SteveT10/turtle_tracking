@@ -554,6 +554,7 @@ function dropTrace(node, force)
 
 function nodePositionSet(id, x, y, z, quality, immediate)
 {
+    console.log(`update: ${id} ${x} ${y}`);
     var position = new THREE.Vector3(x, y, z);
 
     if (!isTagWithinBoundary(position)) {
