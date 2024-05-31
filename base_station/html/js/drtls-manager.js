@@ -53,8 +53,8 @@ function drawBoundary() {
 }
 
 // function sendMessage(tagId, position) {
-//   const accountSid = "AC595211c5deab5bd9d19e0c1764cb4c7b";
-//   const authToken = "94ca666b8ba495e952965fbe7fff4cee";
+//   const accountSid = "  ";
+//   const authToken = "  ";
 //   const fromNumber = "+18449845241";
 //   const numbers = [
 //     "+13476152471",
@@ -107,8 +107,8 @@ function drawBoundary() {
 // }
 
 function sendMessage(tagId, position) {
-  const accountSid = "AC595211c5deab5bd9d19e0c1764cb4c7b";
-  const authToken = "94ca666b8ba495e952965fbe7fff4cee";
+  const accountSid = "  ";
+  const authToken = "  ";
   const fromNumber = "+18449845241";
   const numbers = [
     "+13476152471",
