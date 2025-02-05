@@ -88,9 +88,9 @@ The DWM1001 development comes with pre-flashed firmware that works with the MDEK
 The Raspberry Pi serves as our server base station. With the help of a starter kit, we have built a graphical user interface (GUI) that can be accessed through a specific port to monitor the positions of the tags and anchors in real-time. One of the DWM1001 modules is connected to the Raspberry Pi using the SPI interface, allowing the Raspberry Pi to function as a gateway. This setup requires creating a custom Raspberry Pi kernel and updating the SPI kernel driver to ensure correct communication.
 
 The software architecture on the Raspberry Pi includes the following components:
-        ● GUI Module: This module provides a graphical interface for users to visualize and interact with the UWB network. It displays real-time positions of the tags and
+       -● GUI Module: This module provides a graphical interface for users to visualize and interact with the UWB network. It displays real-time positions of the tags and
         anchors and allows for system configuration and monitoring.        
-        ● Data Collection Module: This module is responsible for communicating with the
+        -● Data Collection Module: This module is responsible for communicating with the
         UWB Anchors via SPI to collect raw location data. It continuously listens for data
         packets and stores them temporarily.
         ● Data Processing Module: This module processes the raw data to calculate the
