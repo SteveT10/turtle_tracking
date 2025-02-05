@@ -12,7 +12,7 @@ The proposed project solution is a Ultra-wideband (UWB) network spanning over th
 
 ![System Overview](./assets/system-overview.png)
 
-Figure 1: Represents the high-level system overview
+                                                                                Figure 1: Represents the high-level system overview
 
 For the high-level system design of the Turtle Tracking Project, we can break down the system into 3 subsystems, which are the UWB Transceiver tags, the monitoring system, and finally the SMS system.
 
