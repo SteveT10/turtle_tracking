@@ -89,7 +89,7 @@ The Raspberry Pi serves as our server base station. With the help of a starter k
 
 The software architecture on the Raspberry Pi includes the following components:
 
-        - **Instruction Memory**: Holds CPU instructions.
+- **Instruction Memory**: Holds CPU instructions.
 
        
     
