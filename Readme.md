@@ -58,7 +58,7 @@ This module is connected to the RPi server via the Universal Asynchronous Receiv
 
 For our SMS system, we are using a Linux-based server. Ubuntu is our go-to right now since we are more familiar with it. Initially, we will be using the AWS EC2 instance since we have a free student account. We will set up our Linux server and then use NGINX as a reverse proxy so we can host our SMS system using the Twilio SMS service. We also could use only GSM because of the SIM900 however, it would cost a lot of money to send SMS using GSM.
 
-![PCB](./pcb.png)
+![PCB](./assets/pcb.png)
 
 ### Figure 5: Schematics of UWB Tag PCB
 
@@ -109,14 +109,35 @@ The software architecture on the Raspberry Pi includes the following components:
 The integration of these components ensures that the Raspberry Pi Server can effectively manage the UWB network, process data in real-time, and provide accurate location
 information. The modular design allows for easy updates and scalability, ensuring the system can adapt to future requirements and enhancements.
 
-###Rationale
+### Rationale
   We decided to use Raspberry Pi 5 since we can run the server directly on the system rather than have to pay for an external server. Cellular will most likely be the best option for an internet connection so that we can send SMS messages to the biologists. Need to determine if buildings on-site are close enough for external power supply. If not, then we will use a battery system.
 
+## Software Design
+The software design for our system is organized to ensure efficient operation, data processing, and communication within the constraints of the hardware. The software architecture is divided into three main components: the UWB Tag, UWB Anchor, and Raspberry Pi Server. Each component has specific roles and responsibilities to ensure the system operates seamlessly.
 
+### UWB Tag Firmware
+The UWB Tag firmware is designed to run on the MSP430FR2476 microcontroller and interacts with the DW1000 UWB module.
 
+### UWB Anchor Firmware
+The UWB Anchor software runs on the DWM1001 module and is responsible for receiving data from the UWB Tags and forwarding it to the Raspberry Pi Server.
 
+### Raspberry Pi Server
+The Raspberry Pi Server acts as the central hub for collecting, processing, and displaying data from the UWB Tags and Anchors. The software on the Raspberry Pi includes several key modules as specified in the architecture section.
 
+Implementation Details:
+        ● Custom Raspberry Pi Kernel: A custom kernel with an updated SPI driver ensures proper
+        communication with the UWB Anchors.
+        ● Graphical User Interface: Developed using the starter kit to provide a user-friendly way
+        to monitor and manage the UWB network.
+        
+Overall, the integration of these components ensures a seamless operation of the entire system. The UWB Tags collect and transmit data to the UWB Anchors, which forward
+the data to the Raspberry Pi Server.
 
+## Human Interface Design
+
+![Human](./assets/human.png)
+
+Our custom-made application overlays the turtle positions (development boards) by using some boards as anchors. It calculates the distance between each anchor and displays on the right column what the coordinates are for both the anchors and turtles. It updates in real-time when the mock turtles move, and will send an SMS message to phone numbers that are added to the program to notify that a turtle has left the designated area.
 
 
 
