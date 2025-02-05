@@ -50,3 +50,26 @@ UWB anchors are afforded a higher profile and weight capacity due to being stati
 The monitoring system consists of the RPI5/ SPI communication and UWB Receiver. This module will be designed to detect and read information from the UWB modules. It will read the position data of each turtle and perform calculations to determine their locations. Once a turtle has left the defined pond area, the system will then use the SMS system to notify the
 biologists.
 
+### SIM900 Module
+
+This module is connected to the RPi server via the Universal Asynchronous Receiver-Transmitter (UART) interface and provides connectivity and or GSM functionality to help the internet.
+
+### SMS System
+
+For our SMS system, we are using a Linux-based server. Ubuntu is our go-to right now since we are more familiar with it. Initially, we will be using the AWS EC2 instance since we have a free student account. We will set up our Linux server and then use NGINX as a reverse proxy so we can host our SMS system using the Twilio SMS service. We also could use only GSM because of the SIM900 however, it would cost a lot of money to send SMS using GSM.
+
+![PCB](./pcb.png)
+
+### Figure 5: Schematics of UWB Tag PCB
+
+This is the schematic of the custom PCB we designed. The large square is the microcontroller, while the smaller one in the bottom right corner is the DWM 1000 chip. The board we designed is simple, the UWB chip is connected to the correct pins on the microcontroller. We broke out some of the important traces onto pin headers, and we added a reset switch for the microcontroller.
+
+
+
+
+
+
+
+
+
+
