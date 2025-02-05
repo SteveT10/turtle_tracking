@@ -64,6 +64,54 @@ For our SMS system, we are using a Linux-based server. Ubuntu is our go-to right
 
 This is the schematic of the custom PCB we designed. The large square is the microcontroller, while the smaller one in the bottom right corner is the DWM 1000 chip. The board we designed is simple, the UWB chip is connected to the correct pins on the microcontroller. We broke out some of the important traces onto pin headers, and we added a reset switch for the microcontroller.
 
+## Software Architecture
+
+Similarly to the high-level system architecture, the software architecture will also be broken down into three parts: UWB Tag, UWB Anchor, and the Raspberry Pi Server.
+
+### UWB Tag
+
+The DW1000 chip also provides software drivers which only require platform-specific functions for SPI, sleep, and mutex lock on interrupts. The platform-specific functions are developed using TI's Code Composer Studio IDE and its implementations can be found in the platform folder of the “dw1000_api_msp430fr2476” on the GitHub repository.
+
+### Rationale
+
+Keeping the module simple and small, which is needed since they will be attached to the turtles. Modules need to be equal or less than 5% of the turtle’s body weight to follow the Washington Department of Fish and Wildlife guidelines.
+        ● TM4 Microcontroller / other MCUs
+        ● UWB chip
+        ● Coin cell battery
+
+### UWB Anchor
+
+The DWM1001 development comes with pre-flashed firmware that works with the MDEK1001 app for quick setup of a UWB network that operates as a proof of concept but is not satisfactory for WDFW requirements. This is the current software on the UWB anchors and custom software still needs to be developed for the anchor.
+
+### Raspberry Pi Server and Base Station
+
+The Raspberry Pi serves as our server base station. With the help of a starter kit, we have built a graphical user interface (GUI) that can be accessed through a specific port to monitor the positions of the tags and anchors in real-time. One of the DWM1001 modules is connected to the Raspberry Pi using the SPI interface, allowing the Raspberry Pi to function as a gateway. This setup requires creating a custom Raspberry Pi kernel and updating the SPI kernel driver to ensure correct communication.
+
+The software architecture on the Raspberry Pi includes the following components:
+        ● GUI Module: This module provides a graphical interface for users to visualize and interact with the UWB network. It displays real-time positions of the tags and
+        anchors and allows for system configuration and monitoring.        
+        ● Data Collection Module: This module is responsible for communicating with the
+        UWB Anchors via SPI to collect raw location data. It continuously listens for data
+        packets and stores them temporarily.
+        ● Data Processing Module: This module processes the raw data to calculate the
+        precise positions of the UWB Tags. It includes algorithms for filtering, error
+        correction, and triangulation.
+        ● Database Module: This module stores the processed data into a database for future
+        retrieval and analysis. SQLite is used for its simplicity and efficiency.
+        ● Server Module: This module provides an interface for external clients to access the
+        processed location data. It includes an HTTP server built javascript and some php
+        for uploading the map .png file, allowing real-time data visualization and
+        interaction through a web interface.
+        ● Configuration Module: This module allows for system configuration and
+        management. It includes functions for setting up network parameters, calibrating
+        UWB Anchors, and updating firmware.
+    
+The integration of these components ensures that the Raspberry Pi Server can effectively manage the UWB network, process data in real-time, and provide accurate location
+information. The modular design allows for easy updates and scalability, ensuring the system can adapt to future requirements and enhancements.
+
+###Rationale
+  We decided to use Raspberry Pi 5 since we can run the server directly on the system rather than have to pay for an external server. Cellular will most likely be the best option for an internet connection so that we can send SMS messages to the biologists. Need to determine if buildings on-site are close enough for external power supply. If not, then we will use a battery system.
+
 
 
 
