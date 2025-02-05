@@ -12,14 +12,14 @@ The proposed project solution is a Ultra-wideband (UWB) network spanning over th
 
 ![System Overview](./assets/system-overview.png)
 
-Figure 1: Represents the high-level system overview
+###Figure 1: Represents the high-level system overview
 
 
 For the high-level system design of the Turtle Tracking Project, we can break down the system into 3 subsystems, which are the UWB Transceiver tags, the monitoring system, and finally the SMS system.
 
 ![Hardware Architecture](./assets/hardware-arch.png)
 
-Figure 2: Represents the Monitoring System
+###Figure 2: Represents the Monitoring System
 
 ### Power Supply
 The UWB tags will be powered by a 3.3 voltage coin cell which will power the MCU and UWB chip on the Tag printed circuit board. The UWB anchors and Raspberry Pi Computer will be powered using on-site outlets and no maintenance should be required for the power supply of these stationary parts. The coin cell of the UWB tags should be changed out with charged cells at
