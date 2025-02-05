@@ -28,14 +28,14 @@ least once per year or whenever convenient.
 ### Ultra Wide Band (UWB) Transceiver
 An Ultra Wide Band Transceiver system is attached to each turtle in the habitat. These systems contain an antenna that can both send and receive data via ultra-wideband, sending the position data of a turtle to the base station at a set interval. Each tag is driven by an MSP430fr2476 microcontroller.
 
-![diagram1](./assets/diagram2.png)
+![diagram1](./assets/diagram.png)
 
 ### Figure 3: Initial Circuit Diagram of System
 
 
 ![diagram2](./assets/diagram2.png)
 
-### Figure 3: Initial Gateway Circuit Diagram of System
+### Figure 4: Initial Gateway Circuit Diagram of System
 
 ### MSP430fr2476 MCU
 
