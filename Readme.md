@@ -88,23 +88,10 @@ The DWM1001 development comes with pre-flashed firmware that works with the MDEK
 The Raspberry Pi serves as our server base station. With the help of a starter kit, we have built a graphical user interface (GUI) that can be accessed through a specific port to monitor the positions of the tags and anchors in real-time. One of the DWM1001 modules is connected to the Raspberry Pi using the SPI interface, allowing the Raspberry Pi to function as a gateway. This setup requires creating a custom Raspberry Pi kernel and updating the SPI kernel driver to ensure correct communication.
 
 The software architecture on the Raspberry Pi includes the following components:
-       - **GUI Module**: This module provides a graphical interface for users to visualize and interact with the UWB network. It displays real-time positions of the tags and
-        anchors and allows for system configuration and monitoring.        
-        ● **Data Collection Module**: This module is responsible for communicating with the
-        UWB Anchors via SPI to collect raw location data. It continuously listens for data
-        packets and stores them temporarily.
-        ● **Data Processing Module**: This module processes the raw data to calculate the
-        precise positions of the UWB Tags. It includes algorithms for filtering, error
-        correction, and triangulation.
-        ● **Database Module**: This module stores the processed data into a database for future
-        retrieval and analysis. SQLite is used for its simplicity and efficiency.
-        ● **Server Module**: This module provides an interface for external clients to access the
-        processed location data. It includes an HTTP server built javascript and some php
-        for uploading the map .png file, allowing real-time data visualization and
-        interaction through a web interface.
-        ● **Configuration Module**: This module allows for system configuration and
-        management. It includes functions for setting up network parameters, calibrating
-        UWB Anchors, and updating firmware.
+
+        - **Instruction Memory**: Holds CPU instructions.
+
+       
     
 The integration of these components ensures that the Raspberry Pi Server can effectively manage the UWB network, process data in real-time, and provide accurate location
 information. The modular design allows for easy updates and scalability, ensuring the system can adapt to future requirements and enhancements.
