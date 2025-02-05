@@ -89,7 +89,13 @@ The Raspberry Pi serves as our server base station. With the help of a starter k
 
 The software architecture on the Raspberry Pi includes the following components:
 
-- **Instruction Memory**: Holds CPU instructions.
+ - **GUI Module**: This module provides a graphical interface for users to visualize and interact with the UWB network. It displays real-time positions of the tags and anchors and allows for system configuration and monitoring.           
+- **Data Collection Module**: This module is responsible for communicating with the UWB Anchors via SPI to collect raw location data. It continuously listens for data packets and stores them temporarily.
+- **Data Processing Module**: This module processes the raw data to calculate the precise positions of the UWB Tags. It includes algorithms for filtering, error correction, and triangulation.
+-**Database Module**: This module stores the processed data into a database for future retrieval and analysis. SQLite is used for its simplicity and efficiency.
+-**Server Module**: This module provides an interface for external clients to access the processed location data. It includes an HTTP server built javascript and some PHP
+for uploading the map .png file, allowing real-time data visualization and interaction through a web interface.
+-**Configuration Module**: This module allows for system configuration and management. It includes functions for setting up network parameters, calibrating UWB Anchors, and updating firmware.
 
        
     
