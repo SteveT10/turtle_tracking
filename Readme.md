@@ -28,4 +28,25 @@ least once per year or whenever convenient.
 ### Ultra Wide Band (UWB) Transceiver
 An Ultra Wide Band Transceiver system is attached to each turtle in the habitat. These systems contain an antenna that can both send and receive data via ultra-wideband, sending the position data of a turtle to the base station at a set interval. Each tag is driven by an MSP430fr2476 microcontroller.
 
+![Hardware Architecture](./diagram.png)
+
+### Figure 3: Initial Circuit Diagram of System
+
+
+![Hardware Architecture](./diagram2.png)
+
+### Figure 3: Initial Gateway Circuit Diagram of System
+
+### MSP430fr2476 MCU
+
+The main goal of our microcontroller is to interface with the UWB transceiver to process the data and handle communication protocols. It will handle pings from the Raspberry Pi for location data and gather the distance between itself and the anchors. An MSP430 microcontroller was chosen due to its advertised low-power modes.
+
+### UWB Anchor
+
+UWB anchors are afforded a higher profile and weight capacity due to being stationary and not attached to turtles. DWM1001 development boards are utilized here due to having readily available housing and equipment to run the boards. The UWB anchors will wait for distance queries from UWB tags and send their distance between themselves the tag.
+
+### Monitoring System
+
+The monitoring system consists of the RPI5/ SPI communication and UWB Receiver. This module will be designed to detect and read information from the UWB modules. It will read the position data of each turtle and perform calculations to determine their locations. Once a turtle has left the defined pond area, the system will then use the SMS system to notify the
+biologists.
 
