@@ -75,9 +75,9 @@ The DW1000 chip also provides software drivers which only require platform-speci
 ### Rationale
 
 Keeping the module simple and small, which is needed since they will be attached to the turtles. Modules need to be equal or less than 5% of the turtle’s body weight to follow the Washington Department of Fish and Wildlife guidelines.
-        ● TM4 Microcontroller / other MCUs
-        ● UWB chip
-        ● Coin cell battery
+-**TM4 Microcontroller / other MCUs**
+-**UWB chip**
+-**Coin cell battery**
 
 ### UWB Anchor
 
@@ -118,17 +118,15 @@ The UWB Anchor software runs on the DWM1001 module and is responsible for receiv
 The Raspberry Pi Server acts as the central hub for collecting, processing, and displaying data from the UWB Tags and Anchors. The software on the Raspberry Pi includes several key modules as specified in the architecture section.
 
 Implementation Details:
-        ● Custom Raspberry Pi Kernel: A custom kernel with an updated SPI driver ensures proper
-        communication with the UWB Anchors.
-        ● Graphical User Interface: Developed using the starter kit to provide a user-friendly way
-        to monitor and manage the UWB network.
+-Custom Raspberry Pi Kernel: A custom kernel with an updated SPI driver ensures proper communication with the UWB Anchors.
+-Graphical User Interface: Developed using the starter kit to provide a user-friendly way to monitor and manage the UWB network.
         
 Overall, the integration of these components ensures a seamless operation of the entire system. The UWB Tags collect and transmit data to the UWB Anchors, which forward
 the data to the Raspberry Pi Server.
 
 ## Human Interface Design
 
-![Human](./assets/human.png)
+![human](./assets/human.png)
 
 Our custom-made application overlays the turtle positions (development boards) by using some boards as anchors. It calculates the distance between each anchor and displays on the right column what the coordinates are for both the anchors and turtles. It updates in real-time when the mock turtles move, and will send an SMS message to phone numbers that are added to the program to notify that a turtle has left the designated area.
 
