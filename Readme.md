@@ -10,3 +10,5 @@ The proposed project solution is a Ultra-wideband (UWB) network spanning over th
 for the locations of each UWB tag. Once the Raspberry pi has the location of a tag and detects an area where turtles require attention from WDFW biologists, it sends an SMS to the biologists about their whereabouts.
 
 ## System Overview
+
+![System Overview](./assets/system-overview.png)
